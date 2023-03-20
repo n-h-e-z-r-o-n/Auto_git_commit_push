@@ -10,6 +10,14 @@ Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_
 
 <img align='right'  alt='' width='300' src="https://github.com/Hezron26/assets/blob/main/sckall.png" >
 
+Use:
+
+Follow the instructions on the screen (GUI)to enter the path to the Git repository you want to commit and push changes to, and the time interval (in minutes) at which you want the application to automatically perform the commit and push.
+
+Once you have entered the required information, the application will automatically perform a Git commit and push at the specified time intervals.
+
+Thats it. Simple and Easy
+
 # Limitations
 
     Currently, this application only works on Windows.
