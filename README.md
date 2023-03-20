@@ -29,3 +29,7 @@ This application is licensed under the GNU General Public  [ License ](https://r
 
 
 ![lazy p](https://user-images.githubusercontent.com/55835551/226184555-72e10ba4-372b-4040-8d6b-cfd2537cc709.jpg)
+
+
+
+For Feedback (etc), You can contact me at [ Phone ](https://wa.me/254714415034)
