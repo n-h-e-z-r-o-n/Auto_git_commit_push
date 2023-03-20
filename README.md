@@ -4,9 +4,16 @@ The application will automatically commit and push changes to the Git repository
 
 Windows platform Download : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git.exe?raw=true)
 
-Limitations
+# Limitations
 
     Currently, this application only works on Windows.
     You need to have Git installed and configured on your system to use this application.
     This application only supports Git repositories hosted on GitHub.
     This application will only push changes to the default branch (usually main or master).
+
+# License
+
+This application is licensed under the MIT License.
+
+
+![lazy p](https://user-images.githubusercontent.com/55835551/226184555-72e10ba4-372b-4040-8d6b-cfd2537cc709.jpg)
