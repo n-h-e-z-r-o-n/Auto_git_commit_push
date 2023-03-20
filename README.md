@@ -4,6 +4,12 @@ The application will automatically commit and push changes to the Git repository
 
 Windows platform Download : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git.exe?raw=true)
 
+# user interface
+
+![image](https://user-images.githubusercontent.com/55835551/226471488-c492b4fb-6c6e-40c8-a353-d97c4b14ed0f.png)
+
+
+
 # Limitations
 
     Currently, this application only works on Windows.
