@@ -2,7 +2,7 @@
 
 The application will automatically commit and push changes to the Git repository at the specified time interval.
 
-Windows platform Download : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git.exe?raw=true)
+Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git.exe?raw=true)
 
 # user interface
 
@@ -19,7 +19,7 @@ Windows platform Download : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_co
 
 # License
 
-This application is licensed under the MIT License.
+This application is licensed under the GNU General Public  [ License ](https://raw.githubusercontent.com/Hezron26/Auto_git_commit_push/main/LICENSE)
 
 
 ![lazy p](https://user-images.githubusercontent.com/55835551/226184555-72e10ba4-372b-4040-8d6b-cfd2537cc709.jpg)
