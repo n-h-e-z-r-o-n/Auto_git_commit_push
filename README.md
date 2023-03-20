@@ -8,7 +8,7 @@ Windows platform Download : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_co
 
 ![image](https://user-images.githubusercontent.com/55835551/226471488-c492b4fb-6c6e-40c8-a353-d97c4b14ed0f.png)
 
-<img align='right'  alt='' width='200' src="https://github.com/Hezron26/assets/blob/main/sckall.png" >
+<img align='right'  alt='' width='300' src="https://github.com/Hezron26/assets/blob/main/sckall.png" >
 
 # Limitations
 
