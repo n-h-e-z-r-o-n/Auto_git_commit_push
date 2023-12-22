@@ -54,7 +54,6 @@ def has_changes():
 def git_comit_push():
     global stop_process, PATH_ENTRY
     git_directory_path = PATH_ENTRY.get()
-    print(git_directory_path)
     stop_process = has_changes()
     if stop_process:
         global TERMINAL_WIDGET, git_commit_push_count, STATUS, app, app
@@ -66,7 +65,6 @@ def git_comit_push():
             result_commit = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], cwd=git_directory_path,capture_output=True, text=True,  check=True)
             result_push = subprocess.run(["git", "push"], cwd=git_directory_path, capture_output=True, text=True,  check=True)
 
-
             TERMINAL_WIDGET.config(state=tk.NORMAL)
             TERMINAL_WIDGET.insert(tk.END, f"{result_add.stdout}")
             TERMINAL_WIDGET.insert(tk.END, f"{result_commit.stdout}")
@@ -76,7 +74,6 @@ def git_comit_push():
 
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
             git_commit_push_count += 1
-            print(seconds_intervals)
         except:
             pass
 
@@ -106,7 +103,6 @@ def start():
         STATUS.config(text="ERROR: fill both entry's, (git directory path) and (time interval in minutes)", fg='red')
 
 
-
 def download_app_icon():
     global assets_img
     for img_name in assets_img:
@@ -114,6 +110,7 @@ def download_app_icon():
         response = requests.get(img_url)
         with open(img_name, 'wb') as f:
             f.write(response.content)
+
 
 def dark_title_bar(window):
     window.update()
@@ -205,9 +202,6 @@ def main():
     SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(SUPPORT, '#2F4F4F', fg_color)
-
-
-
 
     TERMINAL = tk.Label(app, text='TERMINAL',  bg=bg_color,   fg="gray",  font=("Courier New", 10), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.37, relheight=0.03, relwidth=0.12)
