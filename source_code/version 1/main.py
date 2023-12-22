@@ -114,7 +114,7 @@ def main():
     app.title('Auto - Git')
     # app.attributes("-toolwindow", 1)
     # app.attributes("-topmost", 1)
-
+    dark_title_bar(app)
     try:
         app.iconbitmap("panda.ico")
     except:
