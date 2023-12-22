@@ -128,7 +128,7 @@ def main():
     on_c = '#2B3230'
     of_c = '#2B2B2C'
     fg_color = 'gray'
-    PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13, "ital"), anchor='e', borderwidth=0, border=0)
+    PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13, "italc"), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
 
     PATH_ENTRY = tk.Entry(app, bg=of_c, fg=fg_color, font=("Calibri", 12), borderwidth=0, border=0)
