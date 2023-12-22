@@ -219,7 +219,7 @@ def main():
 
     mt = tk.Label(app, bg="blue", fg="#3C4748",  borderwidth=0, border=0)
     mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
-    imagen(r"C:\Users\HEZRON WEKESA\Downloads\sckall.png", int(950*0.3), int( * 0.6  ), mt)
+    imagen(r"C:\Users\HEZRON WEKESA\Downloads\sckall.png", int(950*0.4), int(500*0.6), mt)
     app.mainloop()
 
 
