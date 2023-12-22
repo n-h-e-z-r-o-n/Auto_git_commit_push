@@ -153,16 +153,15 @@ def main():
     STATUS.place(relx=0.17, rely=0.3, relheight=0.04, relwidth=0.8)
 
 
-    STATUS_2 = tk.Label(app, font=("Courier New", 12), anchor='w', borderwidth=0, border=0)
-    STATUS_2.place(relx=0.17, rely=0.46, relheight=0.04, relwidth=0.8)
 
-    START = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 11))
-    START.place(relx=0.4, rely=0.86, relheight=0.04, relwidth=0.12)
-    change_bg_OnHover(START_B, '#EEEEFF', '#F5F5F5')
 
-    STOP = tk.Button(app, text='STOP', bg='#F5F5F5', borderwidth=0, border=0, command=stop, font=("Courier New", 11))
-    STOP.place(relx=0.53, rely=0.86, relheight=0.04, relwidth=0.12)
-    change_bg_OnHover(STOP_B, '#EEEEFF', '#F5F5F5')
+    START_BTN = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 11))
+    START_BTN.place(relx=0.4, rely=0.86, relheight=0.04, relwidth=0.12)
+    change_bg_OnHover(START_BTN, '#EEEEFF', '#F5F5F5')
+
+    STOP_BTN = tk.Button(app, text='STOP', bg='#F5F5F5', borderwidth=0, border=0, command=stop, font=("Courier New", 11))
+    STOP_BTN.place(relx=0.53, rely=0.86, relheight=0.04, relwidth=0.12)
+    change_bg_OnHover(STOP_BTN, '#EEEEFF', '#F5F5F5')
 
     SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
