@@ -155,7 +155,7 @@ def main():
 
 
 
-    START_BTN = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 10))
+    START_BTN = tk.Button(app, text='START', bg='', borderwidth=0, border=0, command=start, font=("Courier New", 10))
     START_BTN.place(relx=0.4, rely=0.24, relheight=0.04, relwidth=0.12)
     change_bg_OnHover(START_BTN, '#EEEEFF', '#F5F5F5')
 
