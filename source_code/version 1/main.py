@@ -8,7 +8,7 @@ import requests
 import ctypes as ct
 import threading
 from datetime import datetime
-global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process
+global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process, TERMINAL_WIDGET
 result = None
 git_commit_push_count = 1
 
@@ -106,10 +106,11 @@ def dark_title_bar(window):
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed():
-    output_text.insert(tk.END, result.stdout)
-    output_text.insert(tk.END, result.stderr)
+    global TERMINAL_WIDGET
+    TERMINAL_WIDGET.insert(tk.END, result.stdout)
+    TERMINAL_WIDGET.insert(tk.END, result.stderr)
 def main():
-    global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
+    global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
     bg_color = "#1B1B1B"
     bg_color = "#212122"
     bg_color = "#1F201F"
@@ -178,8 +179,8 @@ def main():
     ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
-    tml = tk.Text(app, bg='blue', fg="blue", font=("Courier New italic", 8), borderwidth=0, border=0)
-    tml.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
+    TERMINAL_WIDGET = tk.Text(app, bg='blue', fg="blue", font=("Courier New italic", 8), borderwidth=0, border=0)
+    TERMINAL_WIDGET.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
 
     app.mainloop()
 
