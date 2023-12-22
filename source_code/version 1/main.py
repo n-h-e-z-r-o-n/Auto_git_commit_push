@@ -14,7 +14,7 @@ global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, st
 git_commit_push_count = 1
 
 
-
+assets = ["https://github.com/ice-black/assets/blob/main/sckall.png"]
 def show_about():
     webbrowser.open('https://github.com/Hezron26/Auto_git_commit_push')
 
@@ -100,6 +100,7 @@ def start():
     else:
         STATUS.config(text="ERROR: fill both entry's, (git directory path) and (time interval in minutes)", fg='red')
 
+https://github.com/ice-black/assets/blob/main/sckall.png
 
 def download_app_icon():
     url = "https://raw.githubusercontent.com/Hezron26/assets/main/panda.ico"
