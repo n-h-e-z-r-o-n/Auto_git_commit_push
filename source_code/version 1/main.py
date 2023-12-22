@@ -108,6 +108,7 @@ def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
     bg_color = "#1B1B1B"
     bg_color = "#212122"
+    bg_color = "#1F201F"
     app = tk.Tk()
     app.config(bg=bg_color)
     app.maxsize(950, 500)
@@ -126,7 +127,7 @@ def main():
             pass
 
     on_c = '#EEDC82'
-    of_c = '#595652'
+    of_c = '#1F201F'
 
     PATH_lABALE = tk.Label(app, text='PATH :', fg="white", bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
