@@ -52,7 +52,7 @@ def git_comit_push():
             comit_result =subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
             Terminal_feed(comit_result)
             push_result = subprocess.run(["git", "push"], check=True)
-            print(result)
+
             Terminal_feed(result)
 
 
@@ -111,6 +111,9 @@ def dark_title_bar(window):
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed(result):
     global TERMINAL_WIDGET
+    print("--", result)
+    print(result.stdout)
+    print(result.stderr)
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
