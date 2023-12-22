@@ -185,15 +185,14 @@ def main():
 
 
 
-    TERMINAL = tk.Label(app, text='terminal',  bg=bg_color,  activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0)
+    TERMINAL = tk.Label(app, text='TERMINAL',  bg=bg_color,   fg="gray",  font=("Courier New italic", 10), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.37, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(TERMINAL, '#2F4F4F', fg_color)
 
-    ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0, command=show_about)
+    ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 9), borderwidth=0, border=0, command=show_about)
     ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
-    TERMINAL_WIDGET = tk.Text(app, bg=bg_color, fg="#3C4748", font=("Courier New", 8), borderwidth=0, border=0)
+    TERMINAL_WIDGET = tk.Text(app, bg=bg_color, fg="#3C4748", font=("Courier New", 8), borderwidth=1, border=0)
     TERMINAL_WIDGET.place(relx=0.2, rely=0.4, relheight=0.25, relwidth=0.6)
 
 
