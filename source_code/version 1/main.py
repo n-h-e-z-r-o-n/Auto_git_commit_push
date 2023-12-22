@@ -150,11 +150,11 @@ def main():
     change_bg_OnHover(TIME_INTERVAL, on_c, of_c)
 
     STATUS = tk.Label(app, font=("Calibri", 10), anchor='w', borderwidth=0, border=0)
-    STATUS.place(relx=0.17, rely=0.46, relheight=0.13, relwidth=0.8)
+    STATUS.place(relx=0.17, rely=0.3, relheight=0.13, relwidth=0.8)
 
 
     STATUS_2 = tk.Label(app, font=("Courier New", 12), anchor='w', borderwidth=0, border=0)
-    STATUS_2.place(relx=0.17, rely=0.60, relheight=0.04, relwidth=0.8)
+    STATUS_2.place(relx=0.17, rely=0.46, relheight=0.04, relwidth=0.8)
 
     START_B = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 11))
     START_B.place(relx=0.4, rely=0.86, relheight=0.04, relwidth=0.12)
@@ -180,7 +180,7 @@ def main():
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
     TERMINAL_WIDGET = tk.Text(app, bg='blue', fg="blue", font=("Courier New italic", 8), borderwidth=0, border=0)
-    TERMINAL_WIDGET.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
+    #TERMINAL_WIDGET.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
 
     app.mainloop()
 
