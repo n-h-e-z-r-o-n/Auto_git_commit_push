@@ -56,9 +56,10 @@ def git_comit_push():
             result_push = subprocess.run(["git", "push"], cwd=git_directory_path, capture_output=True, text=True,  check=True)
 
             # Display output in Tkinter Text widget
-            TERMINAL_WIDGET.insert(tk.END, f"git add:\n{result_add.stdout}\n\n")
-            TERMINAL_WIDGET.insert(tk.END, f"git commit:\n{result_commit.stdout}\n\n")
-            TERMINAL_WIDGET.insert(tk.END, f"git push:\n{result_push.stdout}\n\n")
+            TERMINAL_WIDGET.insert(tk.END, f"{result_add.stdout}")
+            TERMINAL_WIDGET.insert(tk.END, f"{result_commit.stdout}")
+            TERMINAL_WIDGET.insert(tk.END, f"{result_push.stdout}")
+            TERMINAL_WIDGET.see(tk.END)  # Scroll to the end of the text widget
 
 
 
@@ -120,7 +121,7 @@ def Terminal_feed(result):
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
-    TERMINAL_WIDGET.see(tk.END)  # Scroll to the end of the text widget
+
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
     bg_color = "#1B1B1B"
