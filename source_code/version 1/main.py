@@ -96,9 +96,10 @@ def download_app_icon():
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
     bg_color = "pink"
+
     app = tk.Tk()
     app.minsize(650, 200)
-    app.maxsize(650, 200)
+    app.maxsize(850, 400)
     app.title('Auto - Git')
     # app.attributes("-toolwindow", 1)
     # app.attributes("-topmost", 1)
