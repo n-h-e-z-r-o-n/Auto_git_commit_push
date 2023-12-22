@@ -193,7 +193,7 @@ def main():
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
     TERMINAL_WIDGET = tk.Text(app, bg='white', fg="gray", font=("Courier New", 8), borderwidth=0, border=0)
-    TERMINAL_WIDGET.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
+    TERMINAL_WIDGET.place(relx=0.2, rely=0.668, relheight=0.3, relwidth=0.6)
 
     app.mainloop()
 
