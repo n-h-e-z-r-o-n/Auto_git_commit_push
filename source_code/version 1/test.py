@@ -42,7 +42,7 @@ def git_commit_push():
             except subprocess.CalledProcessError as e:
                 print(f"Error: {e}")
                 # Handle the error as needed
-        else:
+        else: r
             print("No changes to commit and push.")
             app.after(seconds_intervals, git_commit_push)
 
