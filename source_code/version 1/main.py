@@ -162,6 +162,10 @@ def main():
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(SUPPORT, '#2F4F4F', fg_color)
 
+
+    tml = tk.Text(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0, command=show_about)
+    tml.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
+
     TERMINAL = tk.Button(app, text='terminal',  bg=bg_color,  activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(TERMINAL, '#2F4F4F', fg_color)
