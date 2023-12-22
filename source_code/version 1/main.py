@@ -110,7 +110,7 @@ def main():
 
     app = tk.Tk()
     app.config(bg=bg_color)
-    app.minsize(950, 500)
+    app.maxsize(950, 500)
     app.minsize(950, 500)
     app.title('Auto - Git')
     # app.attributes("-toolwindow", 1)
