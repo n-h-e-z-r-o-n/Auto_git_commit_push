@@ -52,6 +52,8 @@ def git_comit_push():
         TERMINAL_WIDGET.insert(tk.END, result.stdout)
         TERMINAL_WIDGET.insert(tk.END, result.stderr)
         result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+        TERMINAL_WIDGET.insert(tk.END, result.stdout)
+        TERMINAL_WIDGET.insert(tk.END, result.stderr)
         result = subprocess.run(["git", "push"], check=True)
 
         TERMINAL_WIDGET.insert(tk.END, result.stdout)
@@ -61,7 +63,7 @@ def git_comit_push():
         git_commit_push_count += 1
         print(seconds_intervals)
 
-            pass
+
 
         app.after(seconds_intervals, git_comit_push)
 
