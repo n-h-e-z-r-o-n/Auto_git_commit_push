@@ -43,7 +43,7 @@ def validate_int(input):
 
 def has_changes():
     try:
-        result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["git", "status", "--porcelain"], cwd=PATH_ENTRY.get() , capture_output=True, text=True, check=True)
         return bool(result.stdout.strip())
     except subprocess.CalledProcessError as e:
         print(f"Error checking Git status: {e}")
@@ -51,8 +51,9 @@ def has_changes():
 
 def git_comit_push():
     global stop_process, result, PATH_ENTRY
-    git_directory_path = r"C:\Users\HEZRON WEKESA\Desktop\python Project\git_Commit_App\Auto_git_commit_push"
+    git_directory_path = PATH_ENTRY.get()
     print(git_directory_path)
+    stop_process = has_changes()
     if stop_process != 'yes':
         global TERMINAL_WIDGET, git_commit_push_count, STATUS, app, app
         try:
