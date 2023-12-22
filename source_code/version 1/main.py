@@ -117,12 +117,27 @@ def dark_title_bar(window):
     value = 2
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
-def Terminal_feed(result):
-    global TERMINAL_WIDGET
 
-    TERMINAL_WIDGET.insert(tk.END, result.stdout)
-    TERMINAL_WIDGET.insert(tk.END, result.stderr)
+from PIL import Image, ImageTk
 
+def imagen(image_path, screen_width, screen_height, widget):
+    def load_image():
+        try:
+            image = Image.open(image_path)
+        except:
+            try:
+                image = Image.open(io.BytesIO(image_path))
+            except:
+                binary_data = base64.b64decode(image_path)  # Decode the string
+                image = Image.open(io.BytesIO(binary_data))
+
+        image = image.resize((screen_width, screen_height), Image.LANCZOS)
+        photo = ImageTk.PhotoImage(image)
+        widget.config(image=photo)
+        widget.image = photo  # Keep a reference to the PhotoImage to prevent it from being garbage collected
+
+    image_thread = threading.Thread(target=load_image)  # Create a thread to load the image asynchronously
+    image_thread.start()
 
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
