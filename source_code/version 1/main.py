@@ -106,7 +106,7 @@ def dark_title_bar(window):
 
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
-    bg_color = "black"
+    bg_color = "#1B1B1B"
 
     app = tk.Tk()
     app.config(bg=bg_color)
