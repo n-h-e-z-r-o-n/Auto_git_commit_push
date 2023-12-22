@@ -44,18 +44,23 @@ def validate_int(input):
 def git_comit_push():
     global stop_process, result
     if stop_process != 'yes':
-        global git_commit_push_count, STATUS, app, app
-        try:
-            current_datetime = datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            result = subprocess.run(["git", "add", "--all"], check=True)
-            result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-            result = subprocess.run(["git", "push"], check=True)
-            Terminal_feed()
-            STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
-            git_commit_push_count += 1
-            print(seconds_intervals)
-        except:
+        global TERMINAL_WIDGET, git_commit_push_count, STATUS, app, app
+
+        current_datetime = datetime.now()
+        formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        result = subprocess.run(["git", "add", "--all"], check=True)
+        TERMINAL_WIDGET.insert(tk.END, result.stdout)
+        TERMINAL_WIDGET.insert(tk.END, result.stderr)
+        result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+        result = subprocess.run(["git", "push"], check=True)
+
+        TERMINAL_WIDGET.insert(tk.END, result.stdout)
+        TERMINAL_WIDGET.insert(tk.END, result.stderr)
+
+        STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
+        git_commit_push_count += 1
+        print(seconds_intervals)
+
             pass
 
         app.after(seconds_intervals, git_comit_push)
@@ -177,7 +182,7 @@ def main():
     ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
-    TERMINAL_WIDGET = tk.Text(app, bg='w', fg="gray", font=("Courier New", 8), borderwidth=0, border=0)
+    TERMINAL_WIDGET = tk.Text(app, bg='white', fg="gray", font=("Courier New", 8), borderwidth=0, border=0)
     TERMINAL_WIDGET.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
 
     app.mainloop()
