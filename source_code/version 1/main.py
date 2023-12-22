@@ -52,7 +52,10 @@ def git_comit_push():
     global stop_process
     if stop_process != 'yes':
         global git_commit_push_count, STATUS, app, app
-        os.system(bat_file_c)
+        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(["git", "commit", "-m", "Your commit message"], check=True)
+        subprocess.run(["git", "push"], check=True
+        #os.system(bat_file_c)
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
         git_commit_push_count += 1
         print(seconds_intervals)
