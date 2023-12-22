@@ -41,6 +41,7 @@ def validate_int(input):
     else:
         return False
 
+
 def has_changes():
     try:
         result = subprocess.run(["git", "status", "--porcelain"], cwd=PATH_ENTRY.get(), capture_output=True, text=True, check=True)
@@ -49,8 +50,9 @@ def has_changes():
         print(f"Error checking Git status: {e}")
         return False
 
+
 def git_comit_push():
-    global stop_process, result, PATH_ENTRY
+    global stop_process, PATH_ENTRY
     git_directory_path = PATH_ENTRY.get()
     print(git_directory_path)
     stop_process = has_changes()
