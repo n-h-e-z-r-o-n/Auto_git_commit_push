@@ -104,11 +104,10 @@ def start():
 
 def download_app_icon():
     global assets_img
-    for img in assets_img:
-        url = git_url
-        filename = 'panda.ico'
-        response = requests.get(url)
-        with open(filename, 'wb') as f:
+    for img_name in assets_img:
+        img_url = assets_img[img_name]
+        response = requests.get(img_url)
+        with open(img_name, 'wb') as f:
             f.write(response.content)
 
 def dark_title_bar(window):
