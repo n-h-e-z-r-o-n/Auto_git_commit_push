@@ -217,9 +217,9 @@ def main():
     TERMINAL_WIDGET = tk.Text(app, bg=bg_color, fg="#3C4748", font=("Courier New", 8), borderwidth=0, border=0)
     TERMINAL_WIDGET.place(relx=0.2, rely=0.4, relheight=0.25, relwidth=0.6)
 
-    mt = tk.Label(app, bg="blue", fg="#3C4748",  borderwidth=0, border=0)
+    mt = tk.Label(app, bg=bg_color, fg="#3C4748",  borderwidth=0, border=0)
     mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
-    imagen(r"C:\Users\HEZRON WEKESA\Downloads\sckall.png", int(950*0.4), int(500*0.6), mt)
+    imagen(r"C:\Users\HEZRON WEKESA\Downloads\sckall.png", int(950*0.5), int(500*0.8), mt)
     app.mainloop()
 
 
