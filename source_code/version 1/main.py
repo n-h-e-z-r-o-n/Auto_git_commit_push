@@ -229,6 +229,7 @@ def main():
         pass
 
     app.mainloop()
+    download_app_icon()
 
 
 if __name__ == "__main__":
