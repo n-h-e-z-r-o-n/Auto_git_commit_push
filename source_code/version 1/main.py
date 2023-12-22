@@ -98,8 +98,8 @@ def main():
     bg_color = "pink"
 
     app = tk.Tk()
-    #app.minsize(650, 200)
-    app.minsize(850, 400)
+    app.minsize(950, 500)
+    app.minsize(950, 500)
     app.title('Auto - Git')
     # app.attributes("-toolwindow", 1)
     # app.attributes("-topmost", 1)
