@@ -63,6 +63,7 @@ def git_comit_push():
 
 
 
+
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
             git_commit_push_count += 1
             print(seconds_intervals)
