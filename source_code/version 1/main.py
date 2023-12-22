@@ -155,8 +155,10 @@ def main():
     # app.attributes("-toolwindow", 1)
     # app.attributes("-topmost", 1)
     dark_title_bar(app)
+
     screen_width = app.winfo_screenwidth()  # Get the screen width dimensions
-    screen_height = root.winfo_screenheight()  # Get the screen height dimensions
+    screen_height = app.winfo_screenheight()  # Get the screen height dimensions
+
     try:
         app.iconbitmap("panda.ico")
     except:
@@ -217,7 +219,7 @@ def main():
 
     mt = tk.Label(app, bg="blue", fg="#3C4748",  borderwidth=0, border=0)
     mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
-    imagen(image_path, screen_width, screen_height, mt)
+    imagen(r"C:\Users\HEZRON WEKESA\Downloads\sckall.png", screen_width*, screen_height, mt)
     app.mainloop()
 
 
