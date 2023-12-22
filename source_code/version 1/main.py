@@ -223,7 +223,10 @@ def main():
 
     mt = tk.Label(app, bg=bg_color, fg="#3C4748",  borderwidth=0, border=0)
     mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
-    #imagen("./sckall.png", int(950*0.5), int(500*0.8), mt)
+    try:
+        imagen("./sckall.png", int(950*0.5), int(500*0.8), mt)
+    except:
+        pass
 
     app.mainloop()
 
