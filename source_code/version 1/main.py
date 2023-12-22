@@ -102,7 +102,7 @@ def dark_title_bar(window):
     value = 2
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
-
+def Terminal_d
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
     bg_color = "#1B1B1B"
