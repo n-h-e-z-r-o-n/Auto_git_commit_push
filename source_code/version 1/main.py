@@ -95,9 +95,10 @@ def download_app_icon():
 
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
-    bg_color = "pink"
+    bg_color = "gray"
 
     app = tk.Tk()
+    app.config(bg=bg_color)
     app.minsize(950, 500)
     app.minsize(950, 500)
     app.title('Auto - Git')
