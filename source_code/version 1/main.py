@@ -161,7 +161,7 @@ def main():
 
     STOP_BTN = tk.Button(app, text='STOP', bg='#354230', borderwidth=0, border=0, command=stop, font=("Courier New", 10))
     STOP_BTN.place(relx=0.53, rely=0.24, relheight=0.04, relwidth=0.12)
-    change_bg_OnHover(STOP_BTN, '#2F4F4F', '#2F4F4F')
+    change_bg_OnHover(STOP_BTN, '#2F4F4F', '#354230')
 
     SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
