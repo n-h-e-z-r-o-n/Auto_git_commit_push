@@ -129,18 +129,18 @@ def main():
     of_c = '#FFF8DC'
 
     PATH_lABALE = tk.Label(app, text='PATH :', font=("Courier New", 11), anchor='e', borderwidth=0, border=0)
-    PATH_lABALE.place(relx=0.01, rely=0., relheight=0.13, relwidth=0.15)
+    PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
 
     PATH_ENTRY = tk.Entry(app, bg=of_c, borderwidth=0, border=0)
-    PATH_ENTRY.place(relx=0.17, rely=0.1, relheight=0.13, relwidth=0.8)
+    PATH_ENTRY.place(relx=0.17, rely=0.05, relheight=0.07, relwidth=0.8)
     change_bg_OnHover(PATH_ENTRY, on_c, of_c)
 
     TIME_RANGE = tk.Label(app, text='TIME(min):', font=("Courier New", 10), anchor='e', borderwidth=0, border=0)
-    TIME_RANGE.place(relx=0.01, rely=0.26, relheight=0.13, relwidth=0.15)
+    TIME_RANGE.place(relx=0.01, rely=0.26, relheight=0.07, relwidth=0.15)
 
     validation = app.register(validate_int)  # create a validation function that only allows integers
     TIME_INTERVAL = tk.Entry(app, bg=of_c, borderwidth=0, border=0, validate="key", validatecommand=(validation, "%P"))
-    TIME_INTERVAL.place(relx=0.17, rely=0.26, relheight=0.13, relwidth=0.8)
+    TIME_INTERVAL.place(relx=0.17, rely=0.26, relheight=0.07, relwidth=0.8)
     change_bg_OnHover(TIME_INTERVAL, on_c, of_c)
 
     STATUS = tk.Label(app, font=("Calibri", 10), anchor='w', borderwidth=0, border=0)
