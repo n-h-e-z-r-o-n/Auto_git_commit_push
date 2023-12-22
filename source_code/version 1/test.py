@@ -1,16 +1,38 @@
+import tkinter as tk
+import sys
 
-from datetime import datetime
+class RedirectText:
+    def __init__(self, widget):
+        self.widget = widget
 
-# Get current date and time
-current_datetime = datetime.now()
+    def write(self, text):
+        self.widget.insert(tk.END, text)
+        self.widget.see(tk.END)  # Auto-scroll to the bottom
 
-# Format the current date and time as a string
-formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+class App:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Python Terminal on Tkinter")
 
-print("Current Date and Time:", formatted_datetime)
+        self.text_widget = tk.Text(root, wrap="word", font=("Courier New", 12))
+        self.text_widget.pack(expand=True, fill="both")
 
-# If you want to get only the current date
-current_date = current_datetime.date()
-formatted_date = current_date.strftime("%Y-%m-%d")
+        # Redirect stdout and stderr
+        sys.stdout = RedirectText(self.text_widget)
+        sys.stderr = RedirectText(self.text_widget)
 
-print("Current Date:", formatted_date)
+        # Add a button to clear the text widget
+        clear_button = tk.Button(root, text="Clear", command=self.clear_text)
+        clear_button.pack()
+
+    def clear_text(self):
+        self.text_widget.delete(1.0, tk.END)
+
+def main():
+    root = tk.Tk()
+    app = App(root)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
+    
