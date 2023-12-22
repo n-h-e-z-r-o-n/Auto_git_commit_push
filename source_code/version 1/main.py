@@ -6,7 +6,7 @@ import tkinter as tk
 import webbrowser
 import requests
 import ctypes as ct
-
+from datetime import datetime
 global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process
 git_commit_push_count = 1
 
