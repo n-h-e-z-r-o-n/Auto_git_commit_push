@@ -42,7 +42,7 @@ def git_comit_push():
     global stop_process
     if stop_process != 'yes':
         global git_commit_push_count, STATUS, app, app
-
+        t
         current_datetime = datetime.now()
         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         subprocess.run(["git", "add", "--all"], check=True)
