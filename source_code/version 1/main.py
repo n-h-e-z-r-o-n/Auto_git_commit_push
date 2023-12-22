@@ -108,7 +108,7 @@ def dark_title_bar(window):
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed():
     global TERMINAL_WIDGET
-    result = subprocess.run(["python", "main.py"], capture_output=True, text=True, check=True)
+    result = subprocess.run( capture_output=True, text=True, check=True)
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
