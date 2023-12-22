@@ -212,7 +212,7 @@ def main():
 
     TERMINAL = tk.Label(app, text='TERMINAL',  bg=bg_color,   fg="gray",  font=("Courier New", 10), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.37, relheight=0.03, relwidth=0.12)
-    TERMINAL_WIDGET.config(state=tk.DISABLED)
+
 
     ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New", 9, "italic"), borderwidth=0, border=0, command=show_about)
     ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
@@ -220,6 +220,7 @@ def main():
 
     TERMINAL_WIDGET = tk.Text(app, bg=bg_color, fg="#3C4748", font=("Courier New", 8), borderwidth=0, border=0)
     TERMINAL_WIDGET.place(relx=0.2, rely=0.4, relheight=0.25, relwidth=0.6)
+    TERMINAL_WIDGET.config(state=tk.DISABLED)
 
     mt = tk.Label(app, bg=bg_color, fg="#3C4748",  borderwidth=0, border=0)
     mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
