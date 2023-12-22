@@ -1,6 +1,6 @@
 # Owner: Nangulu Hezron Wekesa
 # Phone: +254714415034
-
+import subprocess
 import os
 import tkinter as tk
 import webbrowser
@@ -53,8 +53,8 @@ def git_comit_push():
     if stop_process != 'yes':
         global git_commit_push_count, STATUS, app, app
         subprocess.run(["git", "add", "."], check=True)
-        subprocess.run(["git", "commit", "-m", "Your commit message"], check=True)
-        subprocess.run(["git", "push"], check=True
+        subprocess.run(["git", "commit", "-m", "Committed %date:~-4%%date:~3,2%%date:~0,2%.%time:~0,2%%time:~3,2%%time:~6,2%"], check=True)
+        subprocess.run(["git", "push"], check=True)
         #os.system(bat_file_c)
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
         git_commit_push_count += 1
