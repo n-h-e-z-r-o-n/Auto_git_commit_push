@@ -127,7 +127,7 @@ def main():
             pass
 
     on_c = '#EEDC82'
-    of_c = '#1F201F'
+    of_c = '#2B2B2C'
 
     PATH_lABALE = tk.Label(app, text='PATH :', fg="white", bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
