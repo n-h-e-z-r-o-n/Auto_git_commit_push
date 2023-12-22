@@ -51,7 +51,7 @@ def git_comit_push():
             result = subprocess.run(["git", "add", "--all"], check=True)
             result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
             result = subprocess.run(["git", "push"], check=True)
-
+            Terminal_feed()
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
             git_commit_push_count += 1
             print(seconds_intervals)
@@ -106,7 +106,7 @@ def dark_title_bar(window):
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed():
-    global TERMINAL_WIDGET
+    global TERMINAL_WIDGET , result
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 def main():
