@@ -112,7 +112,7 @@ def Terminal_feed():
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
-    TERMINAL_WIDGET.text_widget.see(tk.END)  # Scroll to the end of the text widget
+    TERMINAL_WIDGET.see(tk.END)  # Scroll to the end of the text widget
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
     bg_color = "#1B1B1B"
