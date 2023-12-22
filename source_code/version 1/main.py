@@ -48,7 +48,7 @@ def git_comit_push():
         subprocess.run(["git", "add", "--all"], check=True)
         subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
         subprocess.run(["git", "push"], check=True)
-        #os.system(bat_file_c)
+
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
         git_commit_push_count += 1
         print(seconds_intervals)
