@@ -48,16 +48,11 @@ def git_comit_push():
 
         current_datetime = datetime.now()
         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-        result = subprocess.run(["git", "add", "--all"], check=True)
-        TERMINAL_WIDGET.insert(tk.END, result.stdout)
-        TERMINAL_WIDGET.insert(tk.END, result.stderr)
-        result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-        TERMINAL_WIDGET.insert(tk.END, result.stdout)
-        TERMINAL_WIDGET.insert(tk.END, result.stderr)
+        subprocess.run(["git", "add", "--all"], check=True)
+        subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
         result = subprocess.run(["git", "push"], check=True)
 
-        TERMINAL_WIDGET.insert(tk.END, result.stdout)
-        TERMINAL_WIDGET.insert(tk.END, result.stderr)
+
 
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
         git_commit_push_count += 1
