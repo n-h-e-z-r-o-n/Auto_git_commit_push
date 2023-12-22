@@ -88,7 +88,7 @@ def start():
     if PATH_ENTRY.get() != "" and TIME_INTERVAL.get() != "":
         STATUS.config(text='')
         # C:/Users/HEZRON WEKESA/Desktop/python Project/Compiler Build/Compiler
-        file_path = "C:/Users/HEZRON WEKESA/Desktop/python Project/Compiler Build/Compiler"
+        file_path = ""
         #file_path = PATH_ENTRY.get()
         if os.path.exists(file_path):
             time = int(TIME_INTERVAL.get())
@@ -158,8 +158,6 @@ def main():
     # app.attributes("-topmost", 1)
     dark_title_bar(app)
 
-    screen_width = app.winfo_screenwidth()  # Get the screen width dimensions
-    screen_height = app.winfo_screenheight()  # Get the screen height dimensions
 
     try:
         app.iconbitmap("panda.ico")
