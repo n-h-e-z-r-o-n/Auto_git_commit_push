@@ -8,7 +8,7 @@ import requests
 import ctypes as ct
 import threading
 from datetime import datetime
-global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process, TERMINAL_WIDGET
+global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, stop_process, TERMINAL_WIDGET
 result = None
 git_commit_push_count = 1
 
@@ -69,7 +69,7 @@ def stop():
 
 
 def start():
-    global app, bat_file_c, seconds_intervals, STATUS_2, stop_process
+    global app, bat_file_c, seconds_intervals, stop_process
     stop_process = 'no'
     if PATH_ENTRY.get() != "" and TIME_INTERVAL.get() != "":
         STATUS.config(text='')
@@ -80,7 +80,6 @@ def start():
             time = int(TIME_INTERVAL.get())
             STATUS.config(fg='green', text=f'Will auto comit and push after Every {time} minute')
             seconds_intervals = time * 60 * 1000
-            STATUS_2.config(text="RUNNING....", fg='green')
             app.after(1000, git_comit_push)
         else:
             STATUS.config(text='ERROR : directory does not exist, check the path ')
