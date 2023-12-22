@@ -23,7 +23,7 @@ def has_changes():
 def git_commit_push():
     global stop_process, git_commit_push_count, STATUS, app
     if stop_process != 'yes':
-        git_directory = "C:\Users\HEZRON WEKESA\Desktop\python Project\git_Commit_App\Auto_git_commit_push"
+        git_directory = r"C:\Users\HEZRON WEKESA\Desktop\python Project\git_Commit_App\Auto_git_commit_push"
         if has_changes():
             try:
                 # Redirect subprocess output
