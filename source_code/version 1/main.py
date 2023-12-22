@@ -87,7 +87,7 @@ def git_comit_push():
 def stop():
     global stop_process
     stop_process = 'yes'
-    STATUS_2.config(text="Process Stopped....", fg='blue')
+    STATUS.config(text="Process Stopped....", fg='blue')
 
 
 def start():
