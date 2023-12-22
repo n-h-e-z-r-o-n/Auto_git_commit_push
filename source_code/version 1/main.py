@@ -51,9 +51,9 @@ def git_comit_push():
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
-            result_add = subprocess.run(["git", "add", "--all"], cwd=git_directory_path, check=True)
-            result_commit = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], cwd=git_directory_path, check=True)
-            result_push = subprocess.run(["git", "push"], cwd=git_directory_path, check=True)
+            result_add = subprocess.run(["git", "add", "--all"], cwd=git_directory_path, capture_output=True, text=True, check=True)
+            result_commit = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], cwd=git_directory_path,capture_output=True, text=True,  check=True)
+            result_push = subprocess.run(["git", "push"], cwd=git_directory_path, capture_output=True, text=True,  check=True)
 
             # Display output in Tkinter Text widget
             TERMINAL_WIDGET.insert(tk.END, f"git add:\n{result_add.stdout}\n\n")
