@@ -7,7 +7,7 @@ import webbrowser
 import requests
 import ctypes as ct
 from datetime import datetime
-global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process
+global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process, result
 git_commit_push_count = 1
 
 
@@ -45,7 +45,7 @@ def git_comit_push():
         try:
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            subprocess.run(["git", "add", "--all"], check=True)
+            result = subprocess.run(["git", "add", "--all"], check=True)
             subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
             subprocess.run(["git", "push"], check=True)
 
@@ -102,7 +102,9 @@ def dark_title_bar(window):
     value = 2
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
-def Terminal_d
+def Terminal_feed():
+    output_text.insert(tk.END, result.stdout)
+    output_text.insert(tk.END, result.stderr)
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2
     bg_color = "#1B1B1B"
