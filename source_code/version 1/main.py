@@ -131,7 +131,7 @@ def main():
     PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
 
-    PATH_ENTRY = tk.Entry(app, bg=of_c, borderwidth=0, border=0)
+    PATH_ENTRY = tk.Entry(app, bg=of_c, font=("Courier New", 12), borderwidth=0, border=0)
     PATH_ENTRY.place(relx=0.17, rely=0.05, relheight=0.07, relwidth=0.8)
     change_bg_OnHover(PATH_ENTRY, on_c, of_c)
 
@@ -160,15 +160,15 @@ def main():
 
     SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(SUPPORT, '#2F4F4F', 'gray')
+    change_fg_OnHover(SUPPORT, '#2F4F4F', fg_color)
 
     TERMINAL = tk.Button(app, text='terminal',  bg=bg_color,  activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.968, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(TERMINAL, '#2F4F4F', 'gray')
+    change_fg_OnHover(TERMINAL, '#2F4F4F', fg_color)
 
     ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0, command=show_about)
     ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(ABOUT, '#2F4F4F', 'gray')
+    change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
     app.mainloop()
 
