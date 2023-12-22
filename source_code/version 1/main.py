@@ -151,8 +151,8 @@ def imagen(image_path, screen_width, screen_height, widget):
 
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
-    bg_color = "#1B1B1B"
-    bg_color = "#212122"
+    # bg_color = "#1B1B1B"
+    # bg_color = "#212122"
     bg_color = "#1F201F"
     app = tk.Tk()
     app.config(bg=bg_color)
@@ -193,9 +193,6 @@ def main():
 
     STATUS = tk.Label(app, bg=bg_color, font=("Calibri", 10), anchor='w', borderwidth=0, border=0)
     STATUS.place(relx=0.17, rely=0.3, relheight=0.04, relwidth=0.8)
-
-
-
 
     START_BTN = tk.Button(app, text='START', bg='#354230', borderwidth=0, border=0, command=start, font=("Courier New", 10))
     START_BTN.place(relx=0.4, rely=0.24, relheight=0.04, relwidth=0.12)
