@@ -55,7 +55,7 @@ def git_comit_push():
             result_commit = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], cwd=git_directory_path,capture_output=True, text=True,  check=True)
             result_push = subprocess.run(["git", "push"], cwd=git_directory_path, capture_output=True, text=True,  check=True)
 
-            # Display output in Tkinter Text widget
+
             TERMINAL_WIDGET.config(state=tk.NORMAL)
             TERMINAL_WIDGET.insert(tk.END, f"{result_add.stdout}")
             TERMINAL_WIDGET.insert(tk.END, f"{result_commit.stdout}")
