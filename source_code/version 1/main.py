@@ -108,11 +108,11 @@ def dark_title_bar(window):
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed():
     global TERMINAL_WIDGET
-    result = subprocess.run(["python", "your_script.py"], capture_output=True, text=True, check=True)
+    result = subprocess.run(["python", "main.py"], capture_output=True, text=True, check=True)
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
-    self.text_widget.see(tk.END)  # Scroll to the end of the text widget
+    TERMINAL_WIDGET.text_widget.see(tk.END)  # Scroll to the end of the text widget
 def main():
     global PATH_ENTRY, STATUS, TIME_INTERVAL, app, STATUS_2, TERMINAL_WIDGET
     bg_color = "#1B1B1B"
