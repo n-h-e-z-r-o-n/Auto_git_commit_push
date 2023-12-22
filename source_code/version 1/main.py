@@ -104,7 +104,7 @@ def start():
 
 def download_app_icon():
     global assets_img
-    for git_url in assets_img:
+    for img in assets_img:
         url = git_url
         filename = 'panda.ico'
         response = requests.get(url)
