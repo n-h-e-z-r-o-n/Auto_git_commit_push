@@ -150,7 +150,7 @@ def main():
     change_bg_OnHover(TIME_INTERVAL, on_c, of_c)
 
     STATUS = tk.Label(app, font=("Calibri", 10), anchor='w', borderwidth=0, border=0)
-    STATUS.place(relx=0.17, rely=0.3, relheight=0.13, relwidth=0.8)
+    STATUS.place(relx=0.17, rely=0.3, relheight=0.04, relwidth=0.8)
 
 
     STATUS_2 = tk.Label(app, font=("Courier New", 12), anchor='w', borderwidth=0, border=0)
