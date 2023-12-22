@@ -42,8 +42,11 @@ def git_comit_push():
     global stop_process
     if stop_process != 'yes':
         global git_commit_push_count, STATUS, app, app
+
+        current_datetime = datetime.now()
+        formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         subprocess.run(["git", "add", "--all"], check=True)
-        subprocess.run(["git", "commit", "-m", "Committed %date:~-4%%date:~3,2%%date:~0,2%.%time:~0,2%%time:~3,2%%time:~6,2%"], check=True)
+        subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
         subprocess.run(["git", "push"], check=True)
         #os.system(bat_file_c)
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
