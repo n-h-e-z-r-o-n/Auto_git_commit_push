@@ -155,13 +155,13 @@ def main():
 
 
 
-    START_BTN = tk.Button(app, text='START', bg='', borderwidth=0, border=0, command=start, font=("Courier New", 10))
+    START_BTN = tk.Button(app, text='START', bg='#354230', borderwidth=0, border=0, command=start, font=("Courier New", 10))
     START_BTN.place(relx=0.4, rely=0.24, relheight=0.04, relwidth=0.12)
-    change_bg_OnHover(START_BTN, '#EEEEFF', '#F5F5F5')
+    change_bg_OnHover(START_BTN, '#EEEEFF', '#354230')
 
-    STOP_BTN = tk.Button(app, text='STOP', bg='#F5F5F5', borderwidth=0, border=0, command=stop, font=("Courier New", 10))
+    STOP_BTN = tk.Button(app, text='STOP', bg='#354230', borderwidth=0, border=0, command=stop, font=("Courier New", 10))
     STOP_BTN.place(relx=0.53, rely=0.24, relheight=0.04, relwidth=0.12)
-    change_bg_OnHover(STOP_BTN, '#EEEEFF', '#F5F5F5')
+    change_bg_OnHover(STOP_BTN, '#EEEEFF', '#354230')
 
     SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
     SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
