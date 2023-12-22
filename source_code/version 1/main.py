@@ -149,7 +149,7 @@ def main():
 
 
     STATUS_2 = tk.Label(app, font=("Courier New", 12), anchor='w', borderwidth=0, border=0)
-    STATUS_2.place(relx=0.17, rely=0.60, relheight=0.13, relwidth=0.8)
+    STATUS_2.place(relx=0.17, rely=0.60, relheight=0.04, relwidth=0.8)
 
     START_B = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 11))
     START_B.place(relx=0.4, rely=0.86, relheight=0.13, relwidth=0.12)
