@@ -126,7 +126,7 @@ def main():
         except:
             pass
 
-    on_c = '#EEDC82'
+    on_c = '#2B3230'
     of_c = '#2B2B2C'
     fg_color = 'white'
     PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
@@ -152,11 +152,11 @@ def main():
     STATUS_2.place(relx=0.17, rely=0.60, relheight=0.04, relwidth=0.8)
 
     START_B = tk.Button(app, text='START', bg='#F5F5F5', borderwidth=0, border=0, command=start, font=("Courier New", 11))
-    START_B.place(relx=0.4, rely=0.86, relheight=0.13, relwidth=0.12)
+    START_B.place(relx=0.4, rely=0.86, relheight=0.04, relwidth=0.12)
     change_bg_OnHover(START_B, '#EEEEFF', '#F5F5F5')
 
     STOP_B = tk.Button(app, text='STOP', bg='#F5F5F5', borderwidth=0, border=0, command=stop, font=("Courier New", 11))
-    STOP_B.place(relx=0.53, rely=0.86, relheight=0.13, relwidth=0.12)
+    STOP_B.place(relx=0.53, rely=0.86, relheight=0.04, relwidth=0.12)
     change_bg_OnHover(STOP_B, '#EEEEFF', '#F5F5F5')
 
     SUPPORT = tk.Button(app, text='support', activeforeground='red', anchor='sw', font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
