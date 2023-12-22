@@ -9,7 +9,7 @@ import ctypes as ct
 import threading
 from datetime import datetime
 global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, stop_process, TERMINAL_WIDGET
-result = None
+
 git_commit_push_count = 1
 
 
@@ -49,8 +49,9 @@ def git_comit_push():
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
             subprocess.run(["git", "add", "--all"], check=True)
-            subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-            result = subprocess.run(["git", "push"], check=True)
+            comit_result =subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+            Terminal_feed(comit_result)
+            push_result = subprocess.run(["git", "push"], check=True)
             print(result)
             Terminal_feed(result)
 
