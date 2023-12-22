@@ -103,11 +103,13 @@ def start():
 
 
 def download_app_icon():
-    url = "https://raw.githubusercontent.com/Hezron26/assets/main/panda.ico"
-    filename = 'panda.ico'
-    response = requests.get(url)
-    with open(filename, 'wb') as f:
-        f.write(response.content)
+    global assets_img
+    for i in assets_img:
+        url = url
+        filename = 'panda.ico'
+        response = requests.get(url)
+        with open(filename, 'wb') as f:
+            f.write(response.content)
 
 def dark_title_bar(window):
     window.update()
