@@ -48,12 +48,14 @@ def git_comit_push():
         try:
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            subprocess.run(["git", "add", "--all"], check=True)
-            comit_result =subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-            Terminal_feed(comit_result)
-            push_result = subprocess.run(["git", "push"], check=True)
+            result_add = subprocess.run(["git", "add", "--all"], check=True)
+            result_commit =subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+            result_push = subprocess.run(["git", "push"], check=True)
 
-            Terminal_feed(result)
+            # Display output in Tkinter Text widget
+            TERMINAL_WIDGET.insert(tk.END, f"git add:\n{result_add.stdout}\n\n")
+            TERMINAL_WIDGET.insert(tk.END, f"git commit:\n{result_commit.stdout}\n\n")
+            TERMINAL_WIDGET.insert(tk.END, f"git push:\n{result_push.stdout}\n\n")
 
 
 
@@ -111,9 +113,7 @@ def dark_title_bar(window):
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed(result):
     global TERMINAL_WIDGET
-    print("--", result)
-    print(result.stdout)
-    print(result.stderr)
+
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
 
