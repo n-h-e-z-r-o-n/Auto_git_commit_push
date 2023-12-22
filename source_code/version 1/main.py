@@ -48,10 +48,10 @@ def git_comit_push():
         try:
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            result = subprocess.run(["git", "add", "--all"], check=True)
-            result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-            result = subprocess.run(["git", "push"], check=True)
-            Terminal_feed()
+            subprocess.run(["git", "add", "--all"], check=True)
+            subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+            subprocess.run(["git", "push"], check=True)
+
 
 
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
@@ -59,7 +59,7 @@ def git_comit_push():
             print(seconds_intervals)
         except:
             pass
-
+        Terminal_feed()
         app.after(seconds_intervals, git_comit_push)
 
 
@@ -107,7 +107,7 @@ def dark_title_bar(window):
     value = ct.c_int(value)
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 def Terminal_feed():
-    global TERMINAL_WIDGET 
+    global TERMINAL_WIDGET
     result = subprocess.run(["python", "your_script.py"], capture_output=True, text=True, check=True)
     TERMINAL_WIDGET.insert(tk.END, result.stdout)
     TERMINAL_WIDGET.insert(tk.END, result.stderr)
