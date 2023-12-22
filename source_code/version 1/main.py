@@ -14,7 +14,7 @@ global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, st
 git_commit_push_count = 1
 
 
-assets = ["https://raw.githubusercontent.com/Hezron26/assets/main/panda.ico", "https://github.com/ice-black/assets/blob/main/sckall.png"]
+assets_img = ["https://raw.githubusercontent.com/Hezron26/assets/main/panda.ico", "https://github.com/ice-black/assets/blob/main/sckall.png"]
 def show_about():
     webbrowser.open('https://github.com/Hezron26/Auto_git_commit_push')
 
@@ -104,8 +104,8 @@ def start():
 
 def download_app_icon():
     global assets_img
-    for i in assets_img:
-        url = url
+    for git_url in assets_img:
+        url = git_url
         filename = 'panda.ico'
         response = requests.get(url)
         with open(filename, 'wb') as f:
