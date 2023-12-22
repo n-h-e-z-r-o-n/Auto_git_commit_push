@@ -6,9 +6,12 @@ import tkinter as tk
 import webbrowser
 import requests
 import ctypes as ct
+import threading
 from datetime import datetime
-global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process, result
+global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, STATUS_2, stop_process
+result = None
 git_commit_push_count = 1
+
 
 
 def show_about():
@@ -39,15 +42,15 @@ def validate_int(input):
 
 
 def git_comit_push():
-    global stop_process
+    global stop_process, result
     if stop_process != 'yes':
         global git_commit_push_count, STATUS, app, app
         try:
             current_datetime = datetime.now()
             formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
             result = subprocess.run(["git", "add", "--all"], check=True)
-            subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
-            subprocess.run(["git", "push"], check=True)
+            result = subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
+            result = subprocess.run(["git", "push"], check=True)
 
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
             git_commit_push_count += 1
