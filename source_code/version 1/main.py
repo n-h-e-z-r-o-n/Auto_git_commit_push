@@ -1,5 +1,6 @@
 # Owner: Nangulu Hezron Wekesa
 # Phone: +254714415034
+import base64
 import subprocess
 import os
 import tkinter as tk
@@ -119,6 +120,8 @@ def dark_title_bar(window):
     set_window_attribute(hwnd, rendering_policy, ct.byref(value), ct.sizeof(value))
 
 from PIL import Image, ImageTk
+import io
+import base64
 
 def imagen(image_path, screen_width, screen_height, widget):
     def load_image():
