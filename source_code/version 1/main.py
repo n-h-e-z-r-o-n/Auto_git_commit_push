@@ -197,6 +197,7 @@ def main():
     TERMINAL_WIDGET.place(relx=0.2, rely=0.4, relheight=0.3, relwidth=0.6)
 
 
+
     app.mainloop()
 
 
