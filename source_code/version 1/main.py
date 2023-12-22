@@ -14,7 +14,7 @@ global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, st
 git_commit_push_count = 1
 
 
-assets = ["https://github.com/ice-black/assets/blob/main/sckall.png"]
+assets = ["https://github.com/ice-black/assets/blob/main/sckall.png", "https://github.com/ice-black/assets/blob/22f494f9c07a651b928caba696636573d24931e1/sckall.png"]
 def show_about():
     webbrowser.open('https://github.com/Hezron26/Auto_git_commit_push')
 
