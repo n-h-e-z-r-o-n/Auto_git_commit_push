@@ -51,6 +51,7 @@ def git_comit_push():
             subprocess.run(["git", "add", "--all"], check=True)
             subprocess.run(["git", "commit", "-m", f"Committed {formatted_datetime}"], check=True)
             result = subprocess.run(["git", "push"], check=True)
+            print(result)
             Terminal_feed(result)
 
 
