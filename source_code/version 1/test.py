@@ -31,8 +31,9 @@ class App:
 def main():
     root = tk.Tk()
     app = App(root)
+    print("hello")
     root.mainloop()
 
 if __name__ == "__main__":
     main()
-    
+
