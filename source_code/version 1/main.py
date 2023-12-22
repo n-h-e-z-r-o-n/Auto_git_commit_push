@@ -131,7 +131,7 @@ def main():
     PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
 
-    PATH_ENTRY = tk.Entry(app, bg=of_c, font=("Courier New", 12), borderwidth=0, border=0)
+    PATH_ENTRY = tk.Entry(app, bg=of_c, font=("Calibri", 12), borderwidth=0, border=0)
     PATH_ENTRY.place(relx=0.17, rely=0.05, relheight=0.07, relwidth=0.8)
     change_bg_OnHover(PATH_ENTRY, on_c, of_c)
 
