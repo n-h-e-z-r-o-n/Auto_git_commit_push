@@ -128,15 +128,15 @@ def main():
 
     on_c = '#EEDC82'
     of_c = '#2B2B2C'
-
-    PATH_lABALE = tk.Label(app, text='PATH :', fg="white", bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
+    fg_color = 'white'
+    PATH_lABALE = tk.Label(app, text='PATH :', fg=fg_color, bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     PATH_lABALE.place(relx=0.01, rely=0.05, relheight=0.07, relwidth=0.15)
 
     PATH_ENTRY = tk.Entry(app, bg=of_c, borderwidth=0, border=0)
     PATH_ENTRY.place(relx=0.17, rely=0.05, relheight=0.07, relwidth=0.8)
     change_bg_OnHover(PATH_ENTRY, on_c, of_c)
 
-    TIME_RANGE = tk.Label(app, text='TIME(min):', fg="white",  bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
+    TIME_RANGE = tk.Label(app, text='TIME(min):', fg=fg_color,  bg=bg_color, font=("Courier New", 13), anchor='e', borderwidth=0, border=0)
     TIME_RANGE.place(relx=0.01, rely=0.14, relheight=0.07, relwidth=0.15)
 
     validation = app.register(validate_int)  # create a validation function that only allows integers
