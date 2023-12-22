@@ -49,6 +49,7 @@ def git_comit_push():
         STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
         git_commit_push_count += 1
         print(seconds_intervals)
+
         app.after(seconds_intervals, git_comit_push)
 
 
@@ -71,7 +72,6 @@ def start():
             time = int(TIME_INTERVAL.get())
             STATUS.config(fg='green', text=f'Will auto comit and push after Every {time} minute')
             seconds_intervals = time * 60 * 1000
-            bat_file_c = bat_file_create(file_path)
             STATUS_2.config(text="RUNNING....", fg='green')
             app.after(1000, git_comit_push)
         else:
@@ -153,17 +153,17 @@ def main():
     STOP_B.place(relx=0.53, rely=0.86, relheight=0.04, relwidth=0.12)
     change_bg_OnHover(STOP_B, '#EEEEFF', '#F5F5F5')
 
-    SUPPORT = tk.Button(app, text='support', activeforeground='red', anchor='sw', font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
-    SUPPORT.place(relx=0.274, rely=0.86, relheight=0.13, relwidth=0.12)
-    change_fg_OnHover(SUPPORT, 'red', 'black')
+    SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
+    SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
+    change_fg_OnHover(SUPPORT, '#2F4F4F', 'gray')
 
-    TERMINAL = tk.Button(app, text='terminal', activeforeground='red', anchor='sw', font=("Courier New italic", 8), borderwidth=0, border=0)
-    TERMINAL.place(relx=0.14, rely=0.86, relheight=0.13, relwidth=0.12)
-    change_fg_OnHover(TERMINAL, 'red', 'black')
+    TERMINAL = tk.Button(app, text='terminal',  bg=bg_color,  activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0)
+    TERMINAL.place(relx=0.14, rely=0.968, relheight=0.03, relwidth=0.12)
+    change_fg_OnHover(TERMINAL, '#2F4F4F', 'gray')
 
-    ABOUT = tk.Button(app, text='about', activeforeground='red', anchor='sw', font=("Courier New italic", 8), borderwidth=0, border=0, command=show_about)
-    ABOUT.place(relx=0.01, rely=0.86, relheight=0.13, relwidth=0.12)
-    change_fg_OnHover(ABOUT, 'red', 'black')
+    ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0, command=show_about)
+    ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
+    change_fg_OnHover(ABOUT, '#2F4F4F', 'gray')
 
     app.mainloop()
 
