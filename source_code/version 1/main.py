@@ -64,8 +64,6 @@ def git_comit_push():
             TERMINAL_WIDGET.see(tk.END)  # Scroll to the end of the text widget
             TERMINAL_WIDGET.config(state=tk.DISABLED)
 
-
-
             STATUS.config(text=f'Committed and Pushed made: {git_commit_push_count} ')
             git_commit_push_count += 1
             print(seconds_intervals)
@@ -87,12 +85,9 @@ def start():
     stop_process = 'no'
     if PATH_ENTRY.get() != "" and TIME_INTERVAL.get() != "":
         STATUS.config(text='')
-        # C:/Users/HEZRON WEKESA/Desktop/python Project/Compiler Build/Compiler
-        file_path = ""
-        #file_path = PATH_ENTRY.get()
-        if os.path.exists(file_path):
+        if os.path.exists(PATH_ENTRY.get()):
             time = int(TIME_INTERVAL.get())
-            STATUS.config(fg='green', text=f'Will auto comit and push after Every {time} minute')
+            STATUS.config(fg='green', text=f'Will auto commit and push after Every {time} minute')
             seconds_intervals = time * 60 * 1000
             app.after(1000, git_comit_push)
         else:
