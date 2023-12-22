@@ -43,7 +43,7 @@ def validate_int(input):
 
 def git_comit_push():
     global stop_process, result, PATH_ENTRY
-    git_directory_path = rf"{PATH_ENTRY.get()}"
+    git_directory_path = r"C:\Users\HEZRON WEKESA\Desktop\python Project\git_Commit_App\Auto_git_commit_push"
     print(git_directory_path)
     if stop_process != 'yes':
         global TERMINAL_WIDGET, git_commit_push_count, STATUS, app, app
