@@ -174,7 +174,7 @@ def main():
     change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
     tml = tk.Text(app, bg='blue', fg="blue", font=("Courier New italic", 8), borderwidth=0, border=0)
-    tml.place(relx=0.01, rely=0.968, relheight=0.3, relwidth=1)
+    tml.place(relx=0.0, rely=0.668, relheight=0.3, relwidth=1)
 
     app.mainloop()
 
