@@ -11,16 +11,6 @@ global PATH_ENTRY, STATUS, TIME_INTERVAL, app, bat_file_c, seconds_intervals, ST
 git_commit_push_count = 1
 
 
-def bat_file_create(file_path):
-    with open("auto_git.bat", "w") as f:
-        f.write(f"cd {file_path}\n")
-        f.write("git add --all\n")
-        f.write('git commit -m "Committed %date:~-4%%date:~3,2%%date:~0,2%.%time:~0,2%%time:~3,2%%time:~6,2%"\n')
-        #f.write('git push\n')
-        f.write('exit\n')
-    return "auto_git.bat"
-
-
 def show_about():
     webbrowser.open('https://github.com/Hezron26/Auto_git_commit_push')
 
