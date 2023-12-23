@@ -18,8 +18,17 @@ git_commit_push_count = 1
 
 
 assets_img = {"panda.ico":"https://raw.githubusercontent.com/Hezron26/assets/main/panda.ico", "sckall.png": "https://raw.githubusercontent.com/Hezron26/assets/main/sckall.png"}
+
+
 def show_about():
-    webbrowser.open('https://github.com/Hezron26/Auto_git_commit_push')
+    webbrowser.open('https://github.com/ice-black/Auto_git_commit_push')
+
+
+def open_cmd():
+    if os.path.exists(PATH_ENTRY.get()):
+        cmd = PATH_ENTRY.get()
+        os.chdir(f"{cmd}")
+        os.system("start cmd")
 
 
 def support_info():
@@ -198,28 +207,37 @@ def main():
     STOP_BTN.place(relx=0.53, rely=0.24, relheight=0.04, relwidth=0.12)
     change_bg_OnHover(STOP_BTN, '#2F4F4F', '#354230')
 
-    SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red',  font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
-    SUPPORT.place(relx=0.274, rely=0.968, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(SUPPORT, '#2F4F4F', fg_color)
+
 
     TERMINAL = tk.Label(app, text='TERMINAL',  bg=bg_color,   fg="gray",  font=("Courier New", 10), borderwidth=0, border=0)
     TERMINAL.place(relx=0.14, rely=0.37, relheight=0.03, relwidth=0.12)
-
-
-    ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New", 9, "italic"), borderwidth=0, border=0, command=show_about)
-    ABOUT.place(relx=0.01, rely=0.968, relheight=0.03, relwidth=0.12)
-    change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
 
     TERMINAL_WIDGET = tk.Text(app, bg=bg_color, fg="#3C4748", font=("Courier New", 8), borderwidth=0, border=0)
     TERMINAL_WIDGET.place(relx=0.2, rely=0.4, relheight=0.25, relwidth=0.6)
     TERMINAL_WIDGET.config(state=tk.DISABLED)
 
-    mt = tk.Label(app, bg=bg_color, fg="#3C4748",  borderwidth=0, border=0)
-    mt.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
+    Image_label = tk.Label(app, bg=bg_color, fg="#3C4748", borderwidth=0, border=0)
+    Image_label.place(relx=0.6, rely=0.4, relheight=0.6, relwidth=0.3)
     try:
-        imagen("./sckall.png", int(950*0.5), int(500*0.8), mt)
-    except:
-        pass
+        imagen("./sckall.png", int(950 * 0.5), int(500 * 0.8), Image_label)
+    except Exception as e:
+        print(e)
+
+    CMD = tk.Button(app, text='cmd', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New", 9, "italic"), borderwidth=0, border=0, command=lambda: open_cmd())
+    CMD.place(relx=0.7, rely=0.97, relheight=0.03, relwidth=0.1)
+    change_fg_OnHover(CMD, '#2F4F4F', fg_color)
+
+    ABOUT = tk.Button(app, text='about',  bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New", 9, "italic"), borderwidth=0, border=0, command=show_about)
+    ABOUT.place(relx=0.9, rely=0.97, relheight=0.03, relwidth=0.1)
+    change_fg_OnHover(ABOUT, '#2F4F4F', fg_color)
+
+    SUPPORT = tk.Button(app, text='support', bg=bg_color, activebackground=bg_color, fg="gray", activeforeground='red', font=("Courier New italic", 8), borderwidth=0, border=0, command=support_info)
+    SUPPORT.place(relx=0.8, rely=0.97, relheight=0.03, relwidth=0.1)
+    change_fg_OnHover(SUPPORT, '#2F4F4F', fg_color)
+
+
+
+
 
     app.mainloop()
     download_app_icon()
