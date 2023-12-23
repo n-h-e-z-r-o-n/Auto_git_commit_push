@@ -1,9 +1,12 @@
-# Auto Git Commit and Push
+# Automatic GitHub Commit and Push App
 
-## Overview
-This is a simple Python application with a graphical user interface (GUI) built using Tkinter. The application automates Git commit and push operations at regular intervals. It provides a convenient way to manage and update your Git repositories without manual intervention.
+The application will automatically commit and push changes to the Git repository at the specified time interval.
 
-![Application Screenshot](./sckall.png)
+# VERSION 2
+Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git2.0.exe?raw=true)
+
+# user interface
+![img.png](img.png)
 
 ## Features
 - **Auto Commit and Push:** The application monitors changes in the specified Git directory and automatically commits and pushes changes if detected.
@@ -13,34 +16,28 @@ This is a simple Python application with a graphical user interface (GUI) built 
 - **Open Command Prompt:** Launch the command prompt directly from the application.
 - **Support and About Sections:** Access external resources such as the GitHub repository and support information.
 
-## Prerequisites
-- Python 3.x
-- Tkinter library
-- PIL (Python Imaging Library)
-- Requests library
+<img align='right'  alt='' width='300' src="https://github.com/Hezron26/assets/blob/main/sckall.png" >
 
-## Getting Started
-1. Clone the repository: `git clone https://github.com/ice-black/Auto_git_commit_push.git`
-2. Navigate to the project directory: `cd Auto_git_commit_push`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the application: `python auto_git.py`
+# Use
 
-## Usage
-1. Enter the Git directory path and the desired time interval in minutes.
-2. Click the "START" button to initiate the auto-commit process.
-3. Optionally, click the "STOP" button to halt the auto-commit process.
-4. Use the "cmd" button to open the command prompt and access additional features.
+1. Follow the instructions on the screen (GUI)to enter the path to the Git repository you want to commit and push changes to, and the time interval (in minutes) at which you want the application to automatically perform the commit and push.
+2. Once you have entered the required information, the application will automatically perform a Git commit and push at the specified time intervals.
+3. Thats it. Simple and Easy
 
-## Additional Information
-- **GitHub Repository:** [https://github.com/ice-black/Auto_git_commit_push](https://github.com/ice-black/Auto_git_commit_push)
-- **Support the Developer:** [Buy Me a Coffee](https://www.buymeacoffee.com/hezronna)
+# Limitations
 
-## Screenshots
-![Application Screenshot](./sckall.png)
+    Currently, this application only works on Windows.
+    You need to have Git installed and configured on your system to use this application.
+    This application only supports Git repositories hosted on GitHub.
+    This application will only push changes to the default branch (usually main or master).
 
-## Contributing
-If you find issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+# License
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This application is licensed under the GNU General Public  [ License ](https://raw.githubusercontent.com/Hezron26/Auto_git_commit_push/main/LICENSE)
 
+
+![lazy p](https://user-images.githubusercontent.com/55835551/226184555-72e10ba4-372b-4040-8d6b-cfd2537cc709.jpg)
+
+
+
+For Feedback (etc), You can contact me at [ Phone ](https://wa.me/254714415034)
