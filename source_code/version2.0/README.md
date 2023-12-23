@@ -6,7 +6,7 @@ The application will automatically commit and push changes to the Git repository
 Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git2.0.exe?raw=true)
 
 # user interface
-![img.png](img.png)
+![image](https://github.com/ice-black/Auto_git_commit_push/assets/55835551/f704745e-545f-4406-8784-813d7e53e78d)
 
 ## Features
 - **Auto Commit and Push:** The application monitors changes in the specified Git directory and automatically commits and pushes changes if detected.
