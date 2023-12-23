@@ -2,18 +2,6 @@
 
 The application will automatically commit and push changes to the Git repository at the specified time interval.
 
-# VERSION 2
-Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git2.0.exe?raw=true)
-
-# user interface
-![img.png](img.png)
-## Features
-- **Auto Commit and Push:** The application monitors changes in the specified Git directory and automatically commits and pushes changes if detected.
-- **User-Defined Time Interval:** Set the time interval for auto commit and push operations.
-- **Terminal Output Display:** View the Git command output and status in the integrated terminal.
-- **Dark Mode Title Bar:** Dark mode for the application's title bar on supported systems.
-- **Open Command Prompt:** Launch the command prompt directly from the application.
-- **Support and About Sections:** Access external resources such as the GitHub repository and support information.
 # VERSION 1
 
 Windows os platform  : [ DOWNLOAD ](https://github.com/Hezron26/Auto_git_commit_push/blob/main/Auto-Git.exe?raw=true)
